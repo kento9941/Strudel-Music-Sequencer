@@ -35,11 +35,19 @@ export function SetupButtons() {
     )
 }
 
-export function Proc(bassStruct, dBank, dFast, dSlow, dGain, dLinger, steps) {
-    const tuneText = MyTunes({
-        steps,
+export function Proc(
+        // global settings
+        steps, BPM, 
+        // drums
         dBank, dFast, dSlow, dGain, dLinger,
-        bassStruct
+        bdStruct, hhStruct
+    ) {
+    const tuneText = MyTunes({
+        // global settings
+        steps, BPM, 
+        // drums
+        dBank, dFast, dSlow, dGain, dLinger,
+        bdStruct, hhStruct
     });
 
     globalEditor.setCode(tuneText);
@@ -59,7 +67,13 @@ export function ProcessText(match, ...args) {
 export default function() {
 
     const handleProc = () => {
-        Proc(bassStruct, dBank, dFast, dSlow, dGain, dLinger, steps);
+        Proc(
+            // global settings
+            steps, BPM, 
+            // drums
+            dBank, dFast, dSlow, dGain, dLinger,
+            bdStruct, hhStruct
+        );
     };
 
     const handleProcAndPlay = () => {
@@ -113,13 +127,15 @@ export default function() {
 
 
 
-    // steps
-    const [steps, setSteps] = useState(16);
+    // global settings
+    const [steps, setSteps] = useState(4);
+    const [BPM, setBPM] = useState(60)
 
     // drums
-    const [bassStruct, setBassStruct] = useState(Array(steps * 4).fill("~").join(" "));
+    const [bdStruct, setBdStruct] = useState(Array(steps * 4).fill("~").join(" "));
+    const [hhStruct, setHhStruct] = useState(Array(steps * 4).fill("~").join(" "));
     const [dBank, setDBank] = useState("RolandTR909");
-    const [dFast, setDFast] = useState(0.5);
+    const [dFast, setDFast] = useState(1);
     const [dSlow, setDSlow] = useState(1);
     const [dGain, setDGain] = useState(1);
     const [dLinger, setDLinger] = useState(0);
@@ -142,8 +158,13 @@ export default function() {
                     p1: HUSH
                 </label>
             </div>
+            <p>{hhStruct}</p>
             <DrumSequencer
-                bassStruct={bassStruct} setBassStruct={setBassStruct}
+                // bass drum
+                bdStruct={bdStruct} setBdStruct={setBdStruct}
+                // hihat
+                hhStruct={hhStruct} setHhStruct={setHhStruct}
+                // settings
                 steps={steps}
                 dBank={dBank} setDBank={setDBank}
                 dFast={dFast} setDFast={setDFast}

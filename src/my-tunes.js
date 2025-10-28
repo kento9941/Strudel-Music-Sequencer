@@ -1,13 +1,19 @@
 export function MyTunes({
-    steps,
+    //global settings
+    steps, BPM, 
     // drums
     dBank, dFast, dSlow, dGain, dLinger,
-    bassStruct,
+    bdStruct, hhStruct
 }) {
     return `
-    setcps(140/60/4)
+    setcps(${BPM}/60)
 
     samples('https://raw.githubusercontent.com/Mittans/tidal-drum-machines/main/machines/tidal-drum-machines.json')
     
-    drum: s("${bassStruct}").bank("${dBank}").gain(${dGain}).fast(${dFast})`
+    drums:
+    stack(
+        s("${bdStruct}").bank("${dBank}").gain(${dGain}).fast(${dFast}),
+        
+        s("${hhStruct}").bank("${dBank}").gain(${dGain}).fast(${dFast})
+    )`
 }
