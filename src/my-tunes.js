@@ -6,7 +6,7 @@ export function MyTunes({
     bdStruct, hhStruct, sdStruct, rimStruct, ohStruct, ltStruct, mtStruct, htStruct, rdStruct, crStruct
 }) {
     return `
-    setcps(${BPM}/60)
+    setcps(${BPM}/60/4)
     samples('https://raw.githubusercontent.com/Mittans/tidal-drum-machines/main/machines/tidal-drum-machines.json')    
     drums:
     stack(
