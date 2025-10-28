@@ -3,12 +3,15 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 import { useState, useEffect, useRef } from "react";
 import BassDrum from "./bass-drum";
 import Hihat from "./hihat";
+import SnareDrum from "./snare-drum";
 
 export default function DrumSequencer({
     // bass drum
     bdStruct, setBdStruct, 
     // hihat
     hhStruct, setHhStruct,
+    // snare drum
+    sdStruct, setSdStruct,
     // global settings
     steps, 
     // drum settings
@@ -21,6 +24,9 @@ export default function DrumSequencer({
             </div>
             <div className="mt-3">
                 <Hihat hhStruct={hhStruct} setHhStruct={setHhStruct} steps={steps} />
+            </div>
+            <div className="mt-3">
+                <SnareDrum sdStruct={sdStruct} setSdStruct={setSdStruct} steps={steps} />
             </div>
         </>
     )

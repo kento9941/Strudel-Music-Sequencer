@@ -40,14 +40,14 @@ export function Proc(
         steps, BPM, 
         // drums
         dBank, dFast, dSlow, dGain, dLinger,
-        bdStruct, hhStruct
+        bdStruct, hhStruct, sdStruct
     ) {
     const tuneText = MyTunes({
         // global settings
         steps, BPM, 
         // drums
         dBank, dFast, dSlow, dGain, dLinger,
-        bdStruct, hhStruct
+        bdStruct, hhStruct, sdStruct
     });
 
     globalEditor.setCode(tuneText);
@@ -72,7 +72,7 @@ export default function() {
             steps, BPM, 
             // drums
             dBank, dFast, dSlow, dGain, dLinger,
-            bdStruct, hhStruct
+            bdStruct, hhStruct, sdStruct
         );
     };
 
@@ -134,6 +134,7 @@ export default function() {
     // drums
     const [bdStruct, setBdStruct] = useState(Array(steps * 4).fill("~").join(" "));
     const [hhStruct, setHhStruct] = useState(Array(steps * 4).fill("~").join(" "));
+    const [sdStruct, setSdStruct] = useState(Array(steps * 4).fill("~").join(" "));
     const [dBank, setDBank] = useState("RolandTR909");
     const [dFast, setDFast] = useState(1);
     const [dSlow, setDSlow] = useState(1);
@@ -158,12 +159,13 @@ export default function() {
                     p1: HUSH
                 </label>
             </div>
-            <p>{hhStruct}</p>
             <DrumSequencer
                 // bass drum
                 bdStruct={bdStruct} setBdStruct={setBdStruct}
                 // hihat
                 hhStruct={hhStruct} setHhStruct={setHhStruct}
+                // snare drum
+                sdStruct={sdStruct} setSdStruct={setSdStruct}
                 // settings
                 steps={steps}
                 dBank={dBank} setDBank={setDBank}
