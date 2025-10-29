@@ -33,43 +33,59 @@ export default function DrumSequencer({
     rdStruct, setRdStruct,
     // crash cymbal
     crStruct, setCrStruct,
-    // global settings
+    // settings
     steps, 
-    // drum settings
-    dBank, setDBank, dFast, setDFast, dSlow, setDSlow, dGain, setDGain, dLinger, setDLinger}) {
+    dPlay, setDPlay, 
+    dBank, setDBank,
+    dFast, setDFast,
+    dGain, setDGain}) {
 
     return (
-        <>
-            <div className="mt-3">
-                <Hihat hhStruct={hhStruct} setHhStruct={setHhStruct} steps={steps} />
+        <div className="row justify-content-start align-content-start">
+            <div className="col-4">
+                <div>Hihat</div>
+                <div>Open Hihat</div>
+                <div>Snare Drum</div>
+                <div>Rim Shot</div>
+                <div>Low Tom</div>
+                <div>Middle Tom</div>
+                <div>High Tom</div>
+                <div>Ride Cymbal</div>
+                <div>Crash Cymbal</div>
+                <div>Bass Drum</div>
             </div>
-            <div className="mt-3">
-                <OpenHihat ohStruct={ohStruct} setOhStruct={setOhStruct} steps={steps} />
+            <div className="col-8">
+                <div className="mt-3">
+                    <Hihat hhStruct={hhStruct} setHhStruct={setHhStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <OpenHihat ohStruct={ohStruct} setOhStruct={setOhStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <SnareDrum sdStruct={sdStruct} setSdStruct={setSdStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <RimShot rimStruct={rimStruct} setRimStruct={setRimStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <LowTom ltStruct={ltStruct} setLtStruct={setLtStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <MiddleTom mtStruct={mtStruct} setMtStruct={setMtStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <HighTom htStruct={htStruct} setHtStruct={setHtStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <RideCymbal rdStruct={rdStruct} setRdStruct={setRdStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <CrashCymbal crStruct={crStruct} setCrStruct={setCrStruct} steps={steps} />
+                </div>
+                <div className="mt-3">
+                    <BassDrum bdStruct={bdStruct} setBdStruct={setBdStruct} steps={steps} />
+                </div>
             </div>
-            <div className="mt-3">
-                <SnareDrum sdStruct={sdStruct} setSdStruct={setSdStruct} steps={steps} />
-            </div>
-            <div className="mt-3">
-                <RimShot rimStruct={rimStruct} setRimStruct={setRimStruct} steps={steps} />
-            </div>
-            <div className="mt-3">
-                <LowTom ltStruct={ltStruct} setLtStruct={setLtStruct} steps={steps} />
-            </div>
-            <div className="mt-3">
-                <MiddleTom mtStruct={mtStruct} setMtStruct={setMtStruct} steps={steps} />
-            </div>
-            <div className="mt-3">
-                <HighTom htStruct={htStruct} setHtStruct={setHtStruct} steps={steps} />
-            </div>
-            <div className="mt-3">
-                <RideCymbal rdStruct={rdStruct} setRdStruct={setRdStruct} steps={steps} />
-            </div>
-            <div className="mt-3">
-                <CrashCymbal crStruct={crStruct} setCrStruct={setCrStruct} steps={steps} />
-            </div>
-            <div className="mt-3">
-                <BassDrum bdStruct={bdStruct} setBdStruct={setBdStruct} steps={steps} />
-            </div>
-        </>
+        </div>
     )
 }

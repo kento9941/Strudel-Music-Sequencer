@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  background-color: #1c1c1c;
+  color: #cacaca;
+  font-size: 1.4rem;
+  font-family:"Fira Code", Consolas, "Courier New", Courier, monospace;
+}
+
+.instrument-settings {
+  padding: 5rem;
+}

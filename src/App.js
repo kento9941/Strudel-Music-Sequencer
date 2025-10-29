@@ -39,14 +39,14 @@ export function Proc(
         // global settings
         steps, BPM, 
         // drums
-        dBank, dFast, dSlow, dGain, dLinger,
+        dPlay, dBank, dFast, dGain,
         bdStruct, hhStruct, sdStruct, rimStruct, ohStruct, ltStruct, mtStruct, htStruct, rdStruct, crStruct
     ) {
     const tuneText = MyTunes({
         // global settings
         steps, BPM, 
         // drums
-        dBank, dFast, dSlow, dGain, dLinger,
+        dPlay, dBank, dFast, dGain,
         bdStruct, hhStruct, sdStruct, rimStruct, ohStruct, ltStruct, mtStruct, htStruct, rdStruct, crStruct
     });
 
@@ -71,7 +71,7 @@ export default function() {
             // global settings
             steps, BPM, 
             // drums
-            dBank, dFast, dSlow, dGain, dLinger,
+            dPlay, dBank, dFast, dGain,
             bdStruct, hhStruct, sdStruct, rimStruct, ohStruct, ltStruct, mtStruct, htStruct, rdStruct, crStruct
         );
     };
@@ -142,17 +142,14 @@ export default function() {
     const [rdStruct, setRdStruct] = useState(Array(steps * 4).fill("~").join(" "));
     const [crStruct, setCrStruct] = useState(Array(steps * 4).fill("~").join(" "));
     const [bdStruct, setBdStruct] = useState(Array(steps * 4).fill("~").join(" "));
+    const [dPlay, setDPlay] = useState(true)
     const [dBank, setDBank] = useState("RolandTR909");
     const [dFast, setDFast] = useState(1);
-    const [dSlow, setDSlow] = useState(1);
     const [dGain, setDGain] = useState(1);
-    const [dLinger, setDLinger] = useState(0);
     
     return (
         <div>
             <canvas id="roll"></canvas>
-            <div id="editor" />
-            <div id="output" />
             <textarea className="form-control" rows="15" id="proc" ></textarea>
             <div className="form-check">
                 <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onChange={handleProcAndPlay} defaultChecked />
@@ -166,6 +163,8 @@ export default function() {
                     p1: HUSH
                 </label>
             </div>
+            <div id="output" />
+            <div id="editor" />
             <DrumSequencer
                 // bass drum
                 bdStruct={bdStruct} setBdStruct={setBdStruct}
@@ -182,18 +181,17 @@ export default function() {
                 // middle tom
                 mtStruct={mtStruct} setMtStruct={setMtStruct}
                 // high tom
-                htStruct={htStruct} setHtStruct={setHhStruct}
+                htStruct={htStruct} setHtStruct={setHtStruct}
                 // ride cymbal
                 rdStruct={rdStruct} setRdStruct={setRdStruct}
                 // crash cymbal
                 crStruct={crStruct} setCrStruct={setCrStruct}
                 // settings
                 steps={steps}
+                dPlay={dPlay} setDPlay={setDPlay}
                 dBank={dBank} setDBank={setDBank}
                 dFast={dFast} setDFast={setDFast}
-                dSlow={dSlow} setDSlow={setDSlow}
                 dGain={dGain} setDGain={setDGain}
-                dLinger={dLinger} setDLinger={setDLinger}
             />
             <div className="col-md-4">
                 <nav>
