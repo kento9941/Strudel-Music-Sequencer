@@ -45,7 +45,7 @@
 }
 
 .drum-settings {
-  width: 20rem;
+  width: 25rem;
   height: 3rem;
   border-radius: 0.5rem;
   background-color: #171717;
@@ -56,7 +56,7 @@
 }
 
 .drum-settings .name {
-  width: 6rem;
+  width: 10rem;
 }
 
 .drum-settings .mute-button {

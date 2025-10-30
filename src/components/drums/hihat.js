@@ -12,7 +12,7 @@ export default function Hihat() {
     };
 
     return (
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", gap: "1rem"}}>
             <div className="drum-settings">
                 <div className="name">Hi-Hat</div>
 
