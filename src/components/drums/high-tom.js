@@ -11,6 +11,12 @@ export default function HighTom() {
         updateDrum("high_tom", { struct: newStruct });
     };
 
+    const reset = () => {
+        updateDrum("high_tom", { struct: Array(struct.length).fill("~") });
+        updateDrum("high_tom", { play: true });
+        updateDrum("high_tom", { gain: 1 });
+    }
+
     return (
         <div style={{ display: "flex", gap: "1rem"}}>
             <div className="drum-settings">
@@ -34,6 +40,9 @@ export default function HighTom() {
                     value={gain}
                     onChange={(e) => updateDrum("high_tom", { gain: parseFloat(e.target.value) })}
                 />
+
+                {/* reset button */}
+                <i className="fa-solid fa-rotate-left ms-2" onClick={() => reset()} />
                 
             </div>
             <div style={{ display: "flex", gap: "0.1rem" }}>

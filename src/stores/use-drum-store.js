@@ -3,7 +3,7 @@ import { create } from "zustand";
 export const useDrumStore = create((set, get) => ({
     drums: {
         settings: {
-            bank: "RolandTR909"
+            bank: "RolandTR808"
         },
         hihat: {
             struct: Array(16).fill("~"),

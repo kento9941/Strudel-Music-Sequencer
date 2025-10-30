@@ -11,6 +11,12 @@ export default function SnareDrum() {
         updateDrum("snare_drum", { struct: newStruct });
     };
 
+    const reset = () => {
+        updateDrum("snare_drum", { struct: Array(struct.length).fill("~") });
+        updateDrum("snare_drum", { play: true });
+        updateDrum("snare_drum", { gain: 1 });
+    }
+
     return (
         <div style={{ display: "flex", gap: "1rem"}}>
             <div className="drum-settings">
@@ -34,6 +40,9 @@ export default function SnareDrum() {
                     value={gain}
                     onChange={(e) => updateDrum("snare_drum", { gain: parseFloat(e.target.value) })}
                 />
+
+                {/* reset button */}
+                <i className="fa-solid fa-rotate-left ms-2" onClick={() => reset()} />
                 
             </div>
             <div style={{ display: "flex", gap: "0.1rem" }}>

@@ -11,6 +11,12 @@ export default function OpenHihat() {
         updateDrum("open_hihat", { struct: newStruct });
     };
 
+    const reset = () => {
+        updateDrum("open_hihat", { struct: Array(struct.length).fill("~") });
+        updateDrum("open_hihat", { play: true });
+        updateDrum("open_hihat", { gain: 1 });
+    }
+
     return (
         <div style={{ display: "flex", gap: "1rem"}}>
             <div className="drum-settings">
@@ -34,6 +40,9 @@ export default function OpenHihat() {
                     value={gain}
                     onChange={(e) => updateDrum("open_hihat", { gain: parseFloat(e.target.value) })}
                 />
+
+                {/* reset button */}
+                <i className="fa-solid fa-rotate-left ms-2" onClick={() => reset()} />
                 
             </div>
             <div style={{ display: "flex", gap: "0.1rem" }}>

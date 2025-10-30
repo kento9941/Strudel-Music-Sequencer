@@ -11,6 +11,12 @@ export default function RimShot() {
         updateDrum("rim_shot", { struct: newStruct });
     };
 
+    const reset = () => {
+        updateDrum("rim_shot", { struct: Array(struct.length).fill("~") });
+        updateDrum("rim_shot", { play: true });
+        updateDrum("rim_shot", { gain: 1 });
+    }
+
     return (
         <div style={{ display: "flex", gap: "1rem"}}>
             <div className="drum-settings">
@@ -34,6 +40,9 @@ export default function RimShot() {
                     value={gain}
                     onChange={(e) => updateDrum("rim_shot", { gain: parseFloat(e.target.value) })}
                 />
+
+                {/* reset button */}
+                <i className="fa-solid fa-rotate-left ms-2" onClick={() => reset()} />
                 
             </div>
             <div style={{ display: "flex", gap: "0.1rem" }}>

@@ -11,6 +11,12 @@ export default function CrashCymbal() {
         updateDrum("crash_cymbal", { struct: newStruct });
     };
 
+    const reset = () => {
+        updateDrum("crash_cymbal", { struct: Array(struct.length).fill("~") });
+        updateDrum("crash_cymbal", { play: true });
+        updateDrum("crash_cymbal", { gain: 1 });
+    }
+
     return (
         <div style={{ display: "flex", gap: "1rem"}}>
             <div className="drum-settings">
@@ -34,6 +40,9 @@ export default function CrashCymbal() {
                     value={gain}
                     onChange={(e) => updateDrum("crash_cymbal", { gain: parseFloat(e.target.value) })}
                 />
+
+                {/* reset button */}
+                <i className="fa-solid fa-rotate-left ms-2" onClick={() => reset()} />
                 
             </div>
             <div style={{ display: "flex", gap: "0.1rem" }}>

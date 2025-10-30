@@ -45,7 +45,7 @@
 }
 
 .drum-settings {
-  width: 25rem;
+  width: 28rem;
   height: 3rem;
   border-radius: 0.5rem;
   background-color: #171717;
@@ -65,6 +65,14 @@
 }
 
 .drum-settings .mute-button:hover {
+  color: #e6e6e6;
+}
+
+.fa-rotate-left {
+  cursor: pointer;
+}
+
+.fa-rotate-left:hover {
   color: #e6e6e6;
 }
 
