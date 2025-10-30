@@ -37,6 +37,14 @@
   }
 }
 
+@keyframes glow {
+  0% { box-shadow: 0 0 0.2rem 0.2rem #b853c150; }
+  25% { box-shadow: 0 0 0.2rem 0.2rem #c1535350; }
+  50% { box-shadow: 0 0 0.2rem 0.2rem #c1935350; }
+  75% { box-shadow: 0 0 0.2rem 0.2rem #53c17050; }
+  100% { box-shadow: 0 0 0.2rem 0.2rem #5386c150; }
+}
+
 #root {
   background-color: #1c1c1c;
   color: #cacaca;
@@ -44,15 +52,35 @@
   font-family:"Fira Code", Consolas, "Courier New", Courier, monospace;
 }
 
+.dropdown {
+  width: 12rem;
+  height: 2.5rem;
+  background-color: #171717;
+  border-radius: 0.2em;
+  color: #cacaca;
+  padding: 0.3rem;
+  box-shadow: 0 0 0.2rem 0.2rem #b853c150;
+  animation: glow 15s infinite alternate;
+}
+
+.dropdown option {
+  width: 12rem;
+  height: 2.5rem;
+  background-color: #171717;
+  color: #cacaca;
+  padding: 0.5rem;
+}
+
 .drum-settings {
   width: 28rem;
   height: 3rem;
   border-radius: 0.5rem;
-  background-color: #171717;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  box-shadow: 0 0 0.2rem 0.2rem #b853c150;
+  animation: glow 15s infinite alternate;
 }
 
 .drum-settings .name {
