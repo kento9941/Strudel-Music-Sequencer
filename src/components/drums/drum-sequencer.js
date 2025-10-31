@@ -24,70 +24,74 @@ export default function DrumSequencer() {
 
     return (
         <div className="">
-            <div className="row ">
-                <div className="col">
-                    <BankSelector />
-                </div>
+            <div className="instrument-settings">
+                <div className="name">Drums</div>
+                <div className="row" style={{gap: "1rem"}}>
+                    <div className="col">
+                        <BankSelector />
+                    </div>
 
-                {/* preprocess */}
-                <div className="col">
-                    <i
-                        class="fa-solid fa-rotate-right"
-                        onClick={(() => {
-                            updateDrum("settings", {play: true});
-                            proc?.();
-                            setIsProced(true);
-                        })}
-                    />
-                </div>
-
-                {/* play & stop */}
-                <div className="col">
-                    {!isPlaying ? 
+                    {/* preprocess */}
+                    <div className="col">
                         <i
-                            className="fa-solid fa-play"
-                            onClick={() => {
-                                if (!isProced) {
-                                    alert("Error: Code has not been preprocessed.");
-                                    return;
-                                }
-                                setIsPlaying(true);
-                                play?.();
-                            }}
-                        />
-                        :
-                        <i
-                            className="fa-solid fa-pause"
-                            onClick={() => {
-                                setIsPlaying(false);
-                                stop?.();
-                            }}
-                        />
-                    }
-                </div>
-
-                {/* mute & unmute */}
-                <div className="col">
-                    {!playDrums ?
-                        <i
-                            class="fa-solid fa-volume-xmark"
+                            class="fa-solid fa-rotate-right"
                             onClick={(() => {
                                 updateDrum("settings", {play: true});
                                 proc?.();
+                                setIsProced(true);
                             })}
                         />
-                        :
-                         <i
-                            class="fa-solid fa-volume-high"
-                            onClick={(() => {
-                                updateDrum("settings", {play: false});
-                                proc?.();
-                            })}
-                        />
-                    }
-                    
+                    </div>
+
+                    {/* play & stop */}
+                    <div className="col">
+                        {!isPlaying ? 
+                            <i
+                                className="fa-solid fa-play"
+                                onClick={() => {
+                                    if (!isProced) {
+                                        alert("Error: Code has not been preprocessed.");
+                                        return;
+                                    }
+                                    setIsPlaying(true);
+                                    play?.();
+                                }}
+                            />
+                            :
+                            <i
+                                className="fa-solid fa-pause"
+                                onClick={() => {
+                                    setIsPlaying(false);
+                                    stop?.();
+                                }}
+                            />
+                        }
+                    </div>
+
+                    {/* mute & unmute */}
+                    <div className="col">
+                        {!playDrums ?
+                            <i
+                                class="fa-solid fa-volume-xmark"
+                                onClick={(() => {
+                                    updateDrum("settings", {play: true});
+                                    proc?.();
+                                })}
+                            />
+                            :
+                            <i
+                                class="fa-solid fa-volume-high"
+                                onClick={(() => {
+                                    updateDrum("settings", {play: false});
+                                    proc?.();
+                                })}
+                            />
+                        }
+                        
+                    </div>
                 </div>
             </div>
+            
             
             <div className="mt-4">
                 <Hihat />

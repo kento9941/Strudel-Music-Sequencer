@@ -48,14 +48,14 @@
 #root {
   background-color: #1c1c1c;
   color: #cacaca;
-  font-size: 1.4rem;
-  font-family:"Fira Code", Consolas, "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+  font-family:"M PLUS Rounded 1c", sans-serif;
 }
 
 .dropdown {
   width: 12rem;
   height: 2.5rem;
-  background-color: #171717;
+  background-color: #1c1c1c;
   border-radius: 0.2em;
   color: #cacaca;
   padding: 0.3rem;
@@ -66,9 +66,28 @@
 .dropdown option {
   width: 12rem;
   height: 2.5rem;
-  background-color: #171717;
+  background-color: #1c1c1c;
   color: #cacaca;
   padding: 0.5rem;
+}
+
+.instrument-settings {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 28rem;
+  height: 8rem;
+  gap: 1rem;
+  padding: 1rem;
+  border: 0.1rem solid #1c1c1c;
+  box-shadow: 0 0 0.2rem 0.25rem #b853c150;
+  animation: glow 15s infinite alternate;
+}
+
+.instrument-settings .name {
+  font-size: larger;
+  font-weight: 400;
 }
 
 .drum-settings {
@@ -90,10 +109,6 @@
 .drum-settings .mute-button {
   width: 1rem;
   cursor: pointer;
-}
-
-.drum-settings .mute-button:hover {
-  color: #e6e6e6;
 }
 
 i {
