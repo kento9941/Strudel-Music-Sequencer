@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState } from "react";
 import StrudelEditor from './components/strudel/strudel-editor';
 import DrumSequencer from './components/drums/drum-sequencer';
+import HeroBanner from './components/hero-banner';
 
 export default function App() {
   // global settings
@@ -9,7 +10,12 @@ export default function App() {
   
   return (
     <div className="App">
-      <DrumSequencer />
+      <HeroBanner />
+
+      <div className="sequencer">
+        <DrumSequencer />
+      </div>
+      
       <StrudelEditor BPM={BPM} />
     </div>
   );
