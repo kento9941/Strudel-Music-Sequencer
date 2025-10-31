@@ -42,7 +42,7 @@ export default function SnareDrum() {
                 />
 
                 {/* reset button */}
-                <i className="fa-solid fa-rotate-left ms-2" onClick={() => reset()} />
+                <i className="fa-solid fa-trash ms-2" onClick={() => reset()} />
                 
             </div>
             <div style={{ display: "flex", gap: "0.1rem" }}>

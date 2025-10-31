@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState } from "react";
-import { useDrumStore } from './stores/use-drum-store';
 import StrudelEditor from './components/strudel/strudel-editor';
 import DrumSequencer from './components/drums/drum-sequencer';
 
@@ -10,10 +9,8 @@ export default function App() {
   
   return (
     <div className="App">
-      <StrudelEditor BPM={BPM} />
-
       <DrumSequencer />
-
+      <StrudelEditor BPM={BPM} />
     </div>
   );
 }
