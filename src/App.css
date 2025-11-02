@@ -130,11 +130,19 @@ html, body {
   transition: all .15s ease-in-out;
 }
 
+.radio-inputs .radio .name:hover {
+  background-color: #2e2e2e6f;
+}
+
 .radio-inputs .radio input:checked + .name {
   background-color: #131212;
   height: 2.4rem;
   box-shadow: 0 0 0.2rem 0.25rem #c1935350;
   animation: glow 15s infinite alternate;
+}
+
+.radio-inputs .radio input:checked + .name:hover {
+  background-color: #2e2e2e6f;
 }
 
 .global-settings {
@@ -182,7 +190,7 @@ html, body {
   gap: 0.5rem;
   padding: 0.75rem;
   padding-left: 1.5rem;
-  margin-right: 2rem;
+  margin-right: 3rem;
   box-shadow: 0 0 0.2rem 0.25rem #c1935350;
   animation: glow 15s infinite alternate;
 }
@@ -228,8 +236,27 @@ i:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 8rem;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+.bar-buttons .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  flex-shrink: 0;
+  background-color: #1c1c1c;
+  box-shadow: 0 0 0.2rem 0.25rem #c1935350;
+  animation: glow 15s infinite alternate;
+  transition: all .10s ease-in-out;
+}
+
+.bar-buttons .button:hover {
+  color: #cdcdcd;
+  background-color: #2e2e2e6f;
 }
 
 .drum-bars {

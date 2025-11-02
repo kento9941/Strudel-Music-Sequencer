@@ -4,11 +4,11 @@ import deleteDrumBar from "../../utils/delete-drum-bar";
 export default function DrumBarButtons() {
     return (
         <div className="bar-buttons">
-            <div onClick={addDrumBar}>
-                <i class="fa-solid fa-plus"></i>
+            <div className="button" onClick={addDrumBar}>
+                Add
             </div>
-            <div onClick={deleteDrumBar}>
-                <i class="fa-solid fa-minus"></i>
+            <div className="button" onClick={deleteDrumBar}>
+                Delete
             </div>
         </div>
     )
