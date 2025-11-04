@@ -10,7 +10,12 @@ import VolumeSlider from "./volume-slider";
 export default function PianoSequencer() {
     const { play, stop, proc } = useStrudelStore();
 
+    const banks = [
+        { value: "gm_piano", label: "Acoustic Piano" },
+    ];
+
     const piano = usePianoStore.getState().piano;
+    const bank = usePianoStore((state) => state.piano.settings.bank)
     const pianoPlay = usePianoStore((state) => state.piano.settings.play);
     const pianoGain = usePianoStore((state) => state.piano.settings.gain);
     const updatePiano = usePianoStore((state) => state.updatePiano)
@@ -65,7 +70,7 @@ export default function PianoSequencer() {
                     </div>                    
                     
                     <div style={{display: "flex", alignItems: "center", gap: "0.5rem"}}>
-                        <BankSelector />
+                        <BankSelector banks={banks} bank={bank} update={updatePiano} />
 
                         {/* mute button */}
                         <div

@@ -10,7 +10,22 @@ import VolumeSlider from "./volume-slider";
 export default function DrumSequencer() {
     const { play, stop, proc } = useStrudelStore();
 
+    const banks = [
+        { value: "AkaiMPC60", label: "Akai MPC-60" },
+        { value: "AlesisSR16", label: "Alesis SR-16" },
+        { value: "EmuSP12", label: "Emu SP-12" },
+        { value: "LinnDrum", label: "Linn Drum" },
+        { value: "LinnLM1", label: "Linn LM-1" },
+        { value: "OberheimDMX", label: "Oberheim DMX" },
+        { value: "RolandTR606", label: "Roland TR-606" },
+        { value: "RolandTR707", label: "Roland TR-707" },
+        { value: "RolandTR808", label: "Roland TR-808" },
+        { value: "RolandTR909", label: "Roland TR-909" },
+    ];
+
+
     const drums = useDrumStore.getState().drums;
+    const bank = useDrumStore((state) => state.drums.settings.bank)
     const drumPlay = useDrumStore((state) => state.drums.settings.play);
     const drumGain = useDrumStore((state) => state.drums.settings.gain);
     const updateDrum = useDrumStore((state) => state.updateDrum)
@@ -63,7 +78,7 @@ export default function DrumSequencer() {
                     </div>                    
                     
                     <div style={{display: "flex", alignItems: "center", gap: "0.5rem"}}>
-                        <BankSelector />
+                        <BankSelector banks={banks} bank={bank} update={updateDrum} />
 
                         {/* mute button */}
                         <div
