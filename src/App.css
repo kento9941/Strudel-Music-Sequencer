@@ -14,6 +14,14 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+i {
+  cursor: pointer;
+}
+
+i:hover {
+  color: #e6e6e6;
+}
+
 ::-webkit-scrollbar {
     width: 10px;   
     height: 6px;  
@@ -110,6 +118,11 @@ input[type=number] {
 
 .hero-banner .texts .logo i {
   font-size: 2.5rem;
+  cursor: default;
+}
+
+.hero-banner .texts .logo i:hover {
+  color: inherit !important;
 }
 
 .hero-banner .texts .logo-text {
@@ -273,10 +286,13 @@ input[type=number] {
 }
 
 .sequencer {
+  display: flex;
+  flex-direction: column;
   width: 90vw;
   margin-top: 3rem;
   margin-bottom: 3rem;
   margin-left: 1.5vw;
+  gap: 0.5rem;
 }
 
 .dropdown {
@@ -313,6 +329,10 @@ input[type=number] {
 .instrument-settings .name {
   font-size: larger;
   font-weight: 400;
+}
+
+.instrument-settings i:hover {
+  color: #cacaca99 !important;
 }
 
 .track-settings {
@@ -363,6 +383,10 @@ input[type=number] {
   top: 0.5rem;
   right: 0.5rem;
   cursor: pointer;
+}
+
+.note-settings i:hover {
+  color: #cacaca99 !important;
 }
 
 .radio-container {
@@ -417,15 +441,6 @@ input[type=number] {
 
 .radio-label {
   margin-bottom: 0rem;
-}
-
-
-i {
-  cursor: pointer;
-}
-
-i:hover {
-  color: #e6e6e6;
 }
 
 .bar-buttons {

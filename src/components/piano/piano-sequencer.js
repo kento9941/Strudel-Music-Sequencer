@@ -27,7 +27,6 @@ export default function PianoSequencer() {
 
     // piano settings
     const bank = usePianoStore((state) => state.piano.settings.bank);
-    const pianoPlay = usePianoStore((state) => state.piano.settings.play);
     const pianoGain = usePianoStore((state) => state.piano.settings.gain);
 
     // setter
@@ -48,7 +47,7 @@ export default function PianoSequencer() {
     const { struct: bStruct, play: bPlay, gain: bGain } = usePianoStore((state) => state.piano.b);
 
     return (
-        <div className="">
+        <div className="sequencer">
             <div style={{display: "flex", justifyContent: "flex-start", alignItems: "flex-end", gap: "3rem"}}>
 
                 {/* piano settings */}
@@ -79,18 +78,16 @@ export default function PianoSequencer() {
                         }
                     </div>
                     
-                    <div style={{display: "flex", alignItems: "center", gap: "0.5rem"}}>
+                    <div style={{display: "flex", alignItems: "center", gap: "1.5rem"}}>
+
                         <BankSelector banks={banks} bank={bank} update={updatePiano} />
 
-                        {/* mute button */}
-                        <div
-                            className="mute-button"
-                            onClick={() => updatePiano("settings", { play: !play })}
-                            style={{marginLeft: "0.75rem", marginRight: "0.5rem"}}
-                        >
-                            {pianoPlay ? <i className="fa-solid fa-volume-high" /> : <i className="fa-solid fa-volume-xmark" /> }
-                        </div>                                
-                        <GeneralVolumeSlider name="settings" gain={pianoGain} update={updatePiano} />
+                        {/* volume slider */}
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.3rem"}}>
+                            <i className="mute-button fa-solid fa-volume-high" />                               
+                            <GeneralVolumeSlider name="settings" gain={pianoGain} update={updatePiano} />
+                        </div>
+
                     </div>
                 </div>
 

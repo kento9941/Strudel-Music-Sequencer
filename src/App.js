@@ -15,20 +15,18 @@ export default function App() {
 
       <NavBar instrument={ instrument } setInstrument={ setInstrument } />
 
-      <div className="sequencer">
-        {instrument === "drums" && (
-          <DrumSequencer />
-        )}
-        {instrument === "piano" && (
-          <PianoSequencer />
-        )}
-        {instrument === "guitar" && (
-          <>guitar page</>
-        )}
-        {instrument === "synths" && (
-          <>synths page</>
-        )}
-      </div>
+      {instrument === "drums" && (
+        <DrumSequencer />
+      )}
+      {instrument === "piano" && (
+        <PianoSequencer />
+      )}
+      {instrument === "guitar" && (
+        <>guitar page</>
+      )}
+      {instrument === "synths" && (
+        <>synths page</>
+      )}
       
       
       <StrudelEditor />

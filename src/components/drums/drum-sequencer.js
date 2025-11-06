@@ -45,7 +45,7 @@ export default function DrumSequencer() {
     const [isPlaying, setIsPlaying] = useState(false);
 
     return (
-        <div className="">
+        <div className="sequencer">
             <div style={{display: "flex", justifyContent: "flex-start", alignItems: "flex-end", gap: "3rem"}}>
 
                 {/* drum settings */}
@@ -77,18 +77,14 @@ export default function DrumSequencer() {
                         }
                     </div>
                     
-                    <div style={{display: "flex", alignItems: "center", gap: "0.5rem"}}>
+                    <div style={{display: "flex", alignItems: "center", gap: "1.5rem"}}>
                         <BankSelector banks={banks} bank={bank} update={updateDrum} />
 
                         {/* mute button */}
-                        <div
-                            className="mute-button"
-                            onClick={() => updateDrum("settings", { play: !play })}
-                            style={{marginLeft: "0.75rem", marginRight: "0.5rem"}}
-                        >
-                            {drumPlay ? <i className="fa-solid fa-volume-high" /> : <i className="fa-solid fa-volume-xmark" /> }
-                        </div>                                
-                        <GeneralVolumeSlider name="settings" gain={drumGain} update={updateDrum} />
+                        <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.3rem"}}>
+                            <i className="mute-button fa-solid fa-volume-high" />                               
+                            <GeneralVolumeSlider name="settings" gain={drumGain} update={updateDrum} />
+                        </div>
                     </div>
                 </div>
                 <BarButtons instrument={drums} update={updateDrum} />
