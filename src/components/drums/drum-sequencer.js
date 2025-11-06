@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useDrumStore } from "../../stores/use-drum-store";
-import BarButtons from "../bar-buttons";
+import DrumBarButtons from "./drum-bar-buttons";
 import BankSelector from "../bank-selector";
 import DrumTrack from "./drum-tracks";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider";
@@ -26,7 +26,6 @@ export default function DrumSequencer() {
 
     const drums = useDrumStore.getState().drums;
     const bank = useDrumStore((state) => state.drums.settings.bank)
-    const drumPlay = useDrumStore((state) => state.drums.settings.play);
     const drumGain = useDrumStore((state) => state.drums.settings.gain);
     const updateDrum = useDrumStore((state) => state.updateDrum)
 
@@ -87,7 +86,7 @@ export default function DrumSequencer() {
                         </div>
                     </div>
                 </div>
-                <BarButtons instrument={drums} update={updateDrum} />
+                <DrumBarButtons instrument={drums} update={updateDrum} />
             </div>
             
             <div className="mt-4">

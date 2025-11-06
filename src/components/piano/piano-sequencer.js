@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { usePianoStore } from "../../stores/use-piano-store";
-import BarButtons from "../bar-buttons";
+import PianoBarButtons from "./piano-bar-buttons";
 import BankSelector from "../bank-selector";
 import PianoTrack from "./piano-tracks";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider";
@@ -92,7 +92,7 @@ export default function PianoSequencer() {
                 </div>
 
                 {/* add, delete bar button */}
-                <BarButtons instrument={piano} update={updatePiano} />
+                <PianoBarButtons instrument={piano} update={updatePiano} />
 
                 {/* note settings */}
                 {selectedNote.note !== "" &&

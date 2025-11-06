@@ -1,4 +1,4 @@
-export default function addBar({instrument, update}) {
+export default function addDrumBar({instrument, update}) {
 
     // add one bar to every instrument component
     Object.entries(instrument).forEach(([name, inst]) => {
