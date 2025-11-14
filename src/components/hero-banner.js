@@ -1,5 +1,6 @@
 import banner from '../assets/snowy_background.jpg';
 import snowVideo from '../assets/snow_particles.mp4';
+import AudioVisualizer from './AudioVisualizer';
 
 export default function HeroBanner() {
     return (
@@ -18,8 +19,8 @@ export default function HeroBanner() {
                 playsInline
             />
 
-            <div className="row hero-content">
-                <div className='col-3 texts'>
+            <div className="hero-content">
+                <div className='texts'>
                     <div className="logo">
                         <i className="fa-solid fa-bars" />
                         <i className="fa-solid fa-bars fa-rotate-90" />
@@ -27,8 +28,8 @@ export default function HeroBanner() {
                     </div>
                     <div className="logo-text">Strudel Music Sequencer</div>
                 </div>
-                <div className="col-9">
-
+                <div className="graph">
+                    <AudioVisualizer />
                 </div>
             </div>
         </div>

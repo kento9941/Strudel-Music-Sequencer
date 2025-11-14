@@ -12,13 +12,18 @@ import { useStrudelStore } from "../../stores/use-strudel-store";
 
 let globalEditor = null;
 
+const handleD3Data = (event) => {
+    console.log(event.detail);
+};
+
 export default function StrudelEditor() {
     const setControls = useStrudelStore((state) => state.setControls);
+    const setPlaying = useStrudelStore((state) => state.setPlaying);
     const hasRun = useRef(false);
 
     useEffect(() => {
         if (!hasRun.current) {
-            document.addEventListener("d3Data", (e) => console.log(e.detail));
+            document.addEventListener("d3Data", handleD3Data);
             console_monkey_patch();
             hasRun.current = true;
             //Code copied from example: https://codeberg.org/uzu/strudel/src/branch/main/examples/codemirror-repl
@@ -54,8 +59,14 @@ export default function StrudelEditor() {
         }
     }, []);
 
-    const handlePlay = () => globalEditor?.evaluate();
-    const handleStop = () => globalEditor?.stop();
+    const handlePlay = () => {
+        globalEditor?.evaluate()
+        setPlaying(true);
+    };
+    const handleStop = () => {
+        globalEditor?.stop()
+        setPlaying(false);
+    };
     const handleProc = () => {
         const code = MyTunes();
         globalEditor?.setCode(code);

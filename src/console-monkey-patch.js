@@ -14,13 +14,15 @@ export default function console_monkey_patch() {
         //Join args with space, default behaviour. Check for [hap], that's a strudel prefix
         if (args.join(" ").substring(0, 8) === "%c[hap] ")
         {
+            // new log
+            const message = args.join(" ").replace("%c[hap] ", "");
 
-            //If so, add it to the Array of values.
-            //Then remove the oldest values once we've hit 100.
-            logArray.push(args.join(" ").replace("%c[hap] ", ""));
+            // store only new log
+            logArray.push(message);
 
-            if (logArray.length > 100) {
-                logArray.splice(0, 1);
+            // store max 10
+            if (logArray.length > 10) {
+                logArray.splice(0, logArray.length - 10);
             }
             //Dispatch a customevent we can listen to in App.js
             const event = new CustomEvent("d3Data", { detail: [...logArray] });

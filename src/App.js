@@ -5,7 +5,6 @@ import DrumSequencer from './components/drums/drum-sequencer';
 import PianoSequencer from './components/piano/piano-sequencer';
 import HeroBanner from './components/hero-banner';
 import NavBar from './components/nav-bar';
-import { set } from '@strudel/core';
 
 export default function App() { 
   const [instrument, setInstrument] = useState("drums");
@@ -27,7 +26,6 @@ export default function App() {
       {instrument === "synths" && (
         <>synths page</>
       )}
-      
       
       <StrudelEditor />
     </div>

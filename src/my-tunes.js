@@ -29,12 +29,14 @@ export function MyTunes() {
     function makeNote(n, s, g, r) {
         return note(n).sound(s).postgain(g).release(r);
     }
+    stack(
+        stack(
+            ${drumStack}.bank("${drumBank}").slow(${drumSlow}).gain(${drumGain})
+        ),
 
-    drums:
-    ${drumStack}
-    .bank("${drumBank}").slow(${drumSlow}).gain(${drumGain})
-
-    piano:
-    ${pianoStack}.slow(${pianoSlow}).gain(${pianoGain})
+        stack(
+            ${pianoStack}.slow(${pianoSlow}).gain(${pianoGain})
+        )
+    ).log()
     `;
 }

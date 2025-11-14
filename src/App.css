@@ -100,10 +100,13 @@ i:hover {
 
 .hero-content {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
-.hero-banner .texts {
+.hero-content .texts {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,24 +115,30 @@ i:hover {
   margin-left: 5rem;
 }
 
-.hero-banner .texts .logo {
+.hero-content .texts .logo {
   display: flex;
 }
 
-.hero-banner .texts .logo i {
+.hero-content .texts .logo i {
   font-size: 2.5rem;
   cursor: default;
 }
 
-.hero-banner .texts .logo i:hover {
+.hero-content .texts .logo i:hover {
   color: inherit !important;
 }
 
-.hero-banner .texts .logo-text {
+.hero-content .texts .logo-text {
   white-space: nowrap;
   font-size: 1rem;
   font-weight: 800;
   margin-left: 0.2rem;;
+}
+
+.hero-content .graph {
+  width: 800px;
+  height: 100%;
+  margin-left: 15vw;
 }
 
 .nav-bar {
