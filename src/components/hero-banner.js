@@ -29,7 +29,7 @@ export default function HeroBanner() {
                     <div className="logo-text">Strudel Music Sequencer</div>
                 </div>
                 <div className="graph">
-                    <AudioVisualizer />
+                    {/* <AudioVisualizer /> */}
                 </div>
             </div>
         </div>
