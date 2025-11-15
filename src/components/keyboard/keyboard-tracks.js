@@ -1,12 +1,12 @@
-import { usePianoStore } from "../../stores/use-piano-store.js";
+import { useKeyboardStore } from "../../stores/use-keyboard-store.js";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider.js";
 
-export default function PianoTrack({
+export default function KeyboardTrack({
     displayName, name, symbol, struct, play, gain, setSelectedNote
 }) {
-    const updatePiano = usePianoStore((state) => state.updatePiano);
-    const updateNote = usePianoStore((state) => state.updateNote);
-    const resetTrack = usePianoStore((state) => state.resetTrack);
+    const updateKeyboard = useKeyboardStore((state) => state.updateKeyboard);
+    const updateNote = useKeyboardStore((state) => state.updateNote);
+    const resetTrack = useKeyboardStore((state) => state.resetTrack);
 
     const toggleNote = (index) => {
         const note = struct[index].note;
@@ -22,13 +22,13 @@ export default function PianoTrack({
                 {/* mute button */}
                 <div
                     className="mute-button"
-                    onClick={() => updatePiano(name, { play: !play })}
+                    onClick={() => updateKeyboard(name, { play: !play })}
                 >
                     {play ? <i className="fa-solid fa-volume-high" /> : <i className="fa-solid fa-volume-xmark" /> }
                 </div>
 
                 {/* volume slider */}
-                <GeneralVolumeSlider name={name} gain={gain} update={updatePiano} />
+                <GeneralVolumeSlider name={name} gain={gain} update={updateKeyboard} />
 
                 {/* reset button */}
                 <i

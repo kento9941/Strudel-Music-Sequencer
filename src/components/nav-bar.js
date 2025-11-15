@@ -28,11 +28,11 @@ export default function NavBar({ instrument, setInstrument }) {
                         <input
                             type="radio"
                             name="radio"
-                            value="piano"
-                            checked={instrument === "piano"}
-                            onChange={() => setInstrument("piano")}
+                            value="keyboard"
+                            checked={instrument === "keyboard"}
+                            onChange={() => setInstrument("keyboard")}
                         />
-                        <span className="name">Piano</span>
+                        <span className="name">Keyboard</span>
                     </label>
                         
                     <label className="radio">

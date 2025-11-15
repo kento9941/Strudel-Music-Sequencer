@@ -1,6 +1,6 @@
 import { useGlobalStore } from "./stores/use-global-store";
 import { useDrumStore } from "./stores/use-drum-store";
-import { usePianoStore } from "./stores/use-piano-store";
+import { useKeyboardStore } from "./stores/use-keyboard-store";
 import { useGuitarStore } from "./stores/use-guitar-store";
 
 
@@ -16,11 +16,11 @@ export function MyTunes() {
     const drumSlow = drumState.drums.settings.slow;
     const drumGain = drumState.drums.settings.gain;
 
-    // piano
-    const pianoState = usePianoStore.getState();
-    const pianoStack = pianoState.getPianoStr();
-    const pianoSlow = pianoState.piano.settings.slow;
-    const pianoGain = pianoState.piano.settings.gain;
+    // keyboard
+    const keyboardState = useKeyboardStore.getState();
+    const keyboardStack = keyboardState.getKeyboardStr();
+    const keyboardSlow = keyboardState.keyboard.settings.slow;
+    const keyboardGain = keyboardState.keyboard.settings.gain;
 
     // guitar
     const guitarState = useGuitarStore.getState();
@@ -42,7 +42,7 @@ export function MyTunes() {
         ),
 
         stack(
-            ${pianoStack}.slow(${pianoSlow}).gain(${pianoGain})
+            ${keyboardStack}.slow(${keyboardSlow}).gain(${keyboardGain})
         ),
 
         stack(

@@ -1,16 +1,16 @@
-import { usePianoStore } from "../../stores/use-piano-store";
+import { useKeyboardStore } from "../../stores/use-keyboard-store";
 import OctaveRadio from "../octave-radio";
 import ReleaseSelector from "../selectors/release-selector";
 import NoteVolumeSlider from "../volume-sliders/note-volume-slider";
 
-export default function PianoNoteSettings({selectedNote, setSelectedNote}) {
-    const updateNote = usePianoStore((state) => state.updateNote);
+export default function KeyboardNoteSettings({selectedNote, setSelectedNote}) {
+    const updateNote = useKeyboardStore((state) => state.updateNote);
 
     let n = selectedNote.note;
     let i = selectedNote.index;
-    const noteSymbol = usePianoStore((state) => state.piano[n].struct[i].note);
-    const noteGain = usePianoStore((state) => state.piano[n].struct[i].gain);
-    const noteRelease = usePianoStore((state) => state.piano[n].struct[i].release);
+    const noteSymbol = useKeyboardStore((state) => state.keyboard[n].struct[i].note);
+    const noteGain = useKeyboardStore((state) => state.keyboard[n].struct[i].gain);
+    const noteRelease = useKeyboardStore((state) => state.keyboard[n].struct[i].release);
 
     return (
         <div className="note-settings">

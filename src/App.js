@@ -4,7 +4,7 @@ import StrudelEditor from './components/strudel/strudel-editor';
 import HeroBanner from './components/hero-banner';
 import NavBar from './components/nav-bar';
 import DrumSequencer from './components/drums/drum-sequencer';
-import PianoSequencer from './components/piano/piano-sequencer';
+import KeyboardSequencer from './components/keyboard/keyboard-sequencer';
 import GuitarSequencer from './components/guitar/guitar-sequencer';
 
 export default function App() { 
@@ -18,8 +18,8 @@ export default function App() {
       {instrument === "drums" && (
         <DrumSequencer />
       )}
-      {instrument === "piano" && (
-        <PianoSequencer />
+      {instrument === "keyboard" && (
+        <KeyboardSequencer />
       )}
       {instrument === "guitar" && (
         <GuitarSequencer />
@@ -56,7 +56,7 @@ export default function App() {
 //                 transpiler,
 //                 root: document.getElementById('editor'),
 //                 drawTime,
-//                 onDraw: (haps, time) => drawPianoroll({ haps, time, ctx: drawContext, drawTime, fold: 0 }),
+//                 onDraw: (haps, time) => drawKeyboardroll({ haps, time, ctx: drawContext, drawTime, fold: 0 }),
 //                 prebake: async () => {
 //                     initAudioOnFirstClick(); // needed to make the browser happy (don't await this here..)
 //                     const loadModules = evalScope(

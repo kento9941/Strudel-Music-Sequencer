@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
-export const usePianoStore = create((set, get) => ({
-    piano: {
+export const useKeyboardStore = create((set, get) => ({
+    keyboard: {
         settings: {
             play: false,
             bank: "gm_piano",
@@ -118,27 +118,27 @@ export const usePianoStore = create((set, get) => ({
         }
     },
 
-    updatePiano: (name, updates) => {
+    updateKeyboard: (name, updates) => {
         set((state) => ({
-            piano: {
-                ...state.piano,
-                [name]: { ...state.piano[name], ...updates }
+            keyboard: {
+                ...state.keyboard,
+                [name]: { ...state.keyboard[name], ...updates }
             }
         }))
     },
 
     updateNote: (track, index, updates) => {
         set((state) => {
-            const oldStruct = state.piano[track].struct;
+            const oldStruct = state.keyboard[track].struct;
             const newStruct = oldStruct.map((obj, i) =>
             i === index ? { ...obj, ...updates } : obj
             );
 
             return {
-            piano: {
-                ...state.piano,
+            keyboard: {
+                ...state.keyboard,
                 [track]: {
-                    ...state.piano[track],
+                    ...state.keyboard[track],
                     struct: newStruct
                 }
             }
@@ -148,7 +148,7 @@ export const usePianoStore = create((set, get) => ({
 
     resetTrack: (track) => {
         set((state) => {
-            const structLength = state.piano[track].struct.length;
+            const structLength = state.keyboard[track].struct.length;
             const resetStruct = Array.from({ length: structLength }, () => ({
                 note: "~",
                 gain: 1,
@@ -156,10 +156,10 @@ export const usePianoStore = create((set, get) => ({
             }));
 
             return {
-                piano: {
-                    ...state.piano,
+                keyboard: {
+                    ...state.keyboard,
                     [track]: {
-                        ...state.piano[track],
+                        ...state.keyboard[track],
                         struct: resetStruct,
                         play: true,
                         gain: 1,
@@ -169,20 +169,20 @@ export const usePianoStore = create((set, get) => ({
         });
     },
 
-    getPianoStr: () => {
+    getKeyboardStr: () => {
 
         /*
-        piano = {
+        keyboard = {
             c: {...}, cs: {...}, d: {...}, ...
         }
         */
-        const { piano } = get();
-        const pianoBank = piano.settings.bank;
+        const { keyboard } = get();
+        const keyboardBank = keyboard.settings.bank;
 
         // mute
-        if (!piano.settings.play) return `seq(["~"])`;
+        if (!keyboard.settings.play) return `seq(["~"])`;
 
-        const stack = Object.entries(piano)    // [["c", {struct: [...], play: true, gain: 1}], ...]
+        const stack = Object.entries(keyboard)    // [["c", {struct: [...], play: true, gain: 1}], ...]
             .filter(([name]) => name !== "settings")
             .map(([name, { struct, play, gain }]) => {
 
@@ -195,7 +195,7 @@ export const usePianoStore = create((set, get) => ({
                     struct.map(obj =>
                         obj.note === "~"
                         ? `"~"`
-                        : `makeNote("${obj.note}", "${pianoBank}", ${obj.gain * gain}, ${obj.release})`
+                        : `makeNote("${obj.note}", "${keyboardBank}", ${obj.gain * gain}, ${obj.release})`
                     ).join(", ") +
                     "])";
 

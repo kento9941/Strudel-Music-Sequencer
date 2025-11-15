@@ -1,4 +1,4 @@
-export default function addPianoBar({ instrument, update }) {
+export default function addKeyboardBar({ instrument, update }) {
     Object.entries(instrument).forEach(([name, inst]) => {
         if (name === "settings") return;
 
