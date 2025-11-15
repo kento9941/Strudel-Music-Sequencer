@@ -1,6 +1,7 @@
 import { useGlobalStore } from "./stores/use-global-store";
 import { useDrumStore } from "./stores/use-drum-store";
 import { usePianoStore } from "./stores/use-piano-store";
+import { useGuitarStore } from "./stores/use-guitar-store";
 
 
 export function MyTunes() {
@@ -21,6 +22,12 @@ export function MyTunes() {
     const pianoSlow = pianoState.piano.settings.slow;
     const pianoGain = pianoState.piano.settings.gain;
 
+    // guitar
+    const guitarState = useGuitarStore.getState();
+    const guitarStack = guitarState.getGuitarStr();
+    const guitarSlow = guitarState.guitar.settings.slow;
+    const guitarGain = guitarState.guitar.settings.gain;
+
     return `
     setcps(${BPM}/60/4)
 
@@ -36,6 +43,10 @@ export function MyTunes() {
 
         stack(
             ${pianoStack}.slow(${pianoSlow}).gain(${pianoGain})
+        ),
+
+        stack(
+            ${guitarStack}.slow(${guitarSlow}).gain(${guitarGain})
         )
     ).log()
     `;

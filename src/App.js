@@ -1,10 +1,11 @@
 import './App.css';
 import React, { useState } from "react";
 import StrudelEditor from './components/strudel/strudel-editor';
-import DrumSequencer from './components/drums/drum-sequencer';
-import PianoSequencer from './components/piano/piano-sequencer';
 import HeroBanner from './components/hero-banner';
 import NavBar from './components/nav-bar';
+import DrumSequencer from './components/drums/drum-sequencer';
+import PianoSequencer from './components/piano/piano-sequencer';
+import GuitarSequencer from './components/guitar/guitar-sequencer';
 
 export default function App() { 
   const [instrument, setInstrument] = useState("drums");
@@ -21,7 +22,7 @@ export default function App() {
         <PianoSequencer />
       )}
       {instrument === "guitar" && (
-        <>guitar page</>
+        <GuitarSequencer />
       )}
       {instrument === "synths" && (
         <>synths page</>

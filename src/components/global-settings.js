@@ -3,6 +3,7 @@ import { useStrudelStore } from "../stores/use-strudel-store";
 import { useGlobalStore } from "../stores/use-global-store";
 import { useDrumStore } from "../stores/use-drum-store";
 import { usePianoStore } from "../stores/use-piano-store";
+import { useGuitarStore } from "../stores/use-guitar-store";
 import BPMSelector from "./selectors/bpm-selector";
 
 export default function GlobalSettings() {
@@ -11,14 +12,16 @@ export default function GlobalSettings() {
     const BPM = useGlobalStore((state) => state.BPM);
     const setBPM = useGlobalStore((state) => state.setBPM);
 
-    const updateDrum = useDrumStore((state) => state.updateDrum)
-    const updatePiano = usePianoStore((state) => state.updatePiano)
+    const updateDrum = useDrumStore((state) => state.updateDrum);
+    const updatePiano = usePianoStore((state) => state.updatePiano);
+    const updateGuitar = useGuitarStore((state) => state.updateGuitar)
 
     const [isPlaying, setIsPlaying] = useState(false);
 
     function playAll() {
         updateDrum("settings", {play: true});
         updatePiano("settings", {play: true});
+        updateGuitar("settings", {play: true});
         // add piano, guitar, synths update here
         proc?.();
         setIsPlaying(true);
@@ -28,6 +31,7 @@ export default function GlobalSettings() {
     function stopAll() {
         updateDrum("settings", {play: false});
         updatePiano("settings", {play: false});
+        updateGuitar("settings", {play: false});
 
         setIsPlaying(false);
         stop?.();
