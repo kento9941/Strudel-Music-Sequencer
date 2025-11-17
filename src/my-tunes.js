@@ -3,7 +3,7 @@ import { useDrumStore } from "./stores/use-drum-store";
 import { useKeyboardStore } from "./stores/use-keyboard-store";
 import { useGuitarStore } from "./stores/use-guitar-store";
 import { useBassStore } from "./stores/use-bass-store";
-
+import { useSynthStore } from "./stores/use-synth-store";
 
 export function MyTunes() {
     // global settings
@@ -35,6 +35,12 @@ export function MyTunes() {
     const bassSlow = bassState.bass.settings.slow;
     const bassGain = bassState.bass.settings.gain;
 
+    // synth
+    const synthState = useSynthStore.getState();
+    const synthStack = synthState.getSynthStr();
+    const synthSlow = synthState.synth.settings.slow;
+    const synthGain = synthState.synth.settings.gain;
+
     return `
     setcps(${BPM}/60/4)
 
@@ -58,6 +64,10 @@ export function MyTunes() {
 
         stack(
             ${bassStack}.slow(${bassSlow}).gain(${bassGain})
+        ),
+
+        stack(
+            ${synthStack}.slow(${synthSlow}).gain(${synthGain})
         )
     ).log()
     `;

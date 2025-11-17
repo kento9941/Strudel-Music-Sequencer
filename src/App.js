@@ -7,6 +7,7 @@ import DrumSequencer from './components/drums/drum-sequencer';
 import KeyboardSequencer from './components/keyboard/keyboard-sequencer';
 import GuitarSequencer from './components/guitar/guitar-sequencer';
 import BassSequencer from './components/bass/bass-sequencer';
+import SynthSequencer from './components/synth/synth-sequencer';
 
 export default function App() { 
   const [instrument, setInstrument] = useState("drums");
@@ -29,7 +30,7 @@ export default function App() {
         <BassSequencer />
       )}
       {instrument === "synths" && (
-        <>synths page</>
+        <SynthSequencer />
       )}
       
       <StrudelEditor />
