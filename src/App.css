@@ -116,16 +116,8 @@ i:hover {
 }
 
 .hero-content .texts .logo {
-  display: flex;
-}
-
-.hero-content .texts .logo i {
-  font-size: 2.5rem;
-  cursor: default;
-}
-
-.hero-content .texts .logo i:hover {
-  color: inherit !important;
+  width: 12rem;
+  height: 3rem;
 }
 
 .hero-content .texts .logo-text {
