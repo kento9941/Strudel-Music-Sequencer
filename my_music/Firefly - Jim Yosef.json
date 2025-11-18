@@ -20072,7 +20072,7 @@
       "play": false,
       "bank": "gm_piano",
       "slow": 2,
-      "gain": 1
+      "gain": 0.35
     },
     "c": {
       "struct": [
