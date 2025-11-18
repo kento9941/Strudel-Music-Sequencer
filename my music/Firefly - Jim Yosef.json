@@ -2008,68 +2008,68 @@
     },
     "hihat": {
       "struct": [
+        "hh",
+        "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
+        "~",
+        "hh",
+        "~",
+        "hh",
+        "hh",
+        "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
+        "~",
+        "hh",
         "~",
         "~",
+        "hh",
+        "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
+        "~",
+        "hh",
+        "~",
+        "hh",
+        "hh",
+        "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
         "~",
+        "hh",
         "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
-        "~",
+        "hh",
         "~",
         "~",
         "~",
@@ -2654,11 +2654,11 @@
         "sd",
         "sd",
         "sd",
-        "sd",
-        "sd",
-        "sd",
-        "sd",
-        "sd",
+        "~",
+        "~",
+        "~",
+        "~",
+        "~",
         "sd",
         "~",
         "~",
@@ -2790,7 +2790,7 @@
         "~"
       ],
       "play": true,
-      "gain": 0.45
+      "gain": 0.4
     },
     "rim_shot": {
       "struct": [
@@ -3052,7 +3052,7 @@
         "~"
       ],
       "play": true,
-      "gain": 1
+      "gain": 0.4
     },
     "low_tom": {
       "struct": [
@@ -3180,8 +3180,8 @@
         "~",
         "~",
         "~",
-        "~",
-        "~",
+        "lt",
+        "lt",
         "~",
         "~",
         "~",
@@ -3440,8 +3440,8 @@
         "~",
         "~",
         "~",
-        "~",
-        "~",
+        "mt",
+        "mt",
         "~",
         "~",
         "~",
@@ -4632,7 +4632,7 @@
       "play": false,
       "bank": "gm_electric_guitar_clean",
       "slow": 16,
-      "gain": 0.35
+      "gain": 0.25
     },
     "c": {
       "struct": [
@@ -21933,7 +21933,7 @@
           "release": 1
         },
         {
-          "note": "b3",
+          "note": "b2",
           "gain": 1,
           "release": 0.75
         },
@@ -21948,7 +21948,7 @@
           "release": 1
         },
         {
-          "note": "b3",
+          "note": "b2",
           "gain": "1.2",
           "release": 1.25
         },
@@ -22064,7 +22064,7 @@
         }
       ],
       "play": true,
-      "gain": 1
+      "gain": 0.5
     }
   },
   "synth": {
@@ -23395,7 +23395,7 @@
         {
           "note": "cs4",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -23410,167 +23410,7 @@
         {
           "note": "cs4",
           "gain": 1,
-          "release": 1.25
-        },
-        {
-          "note": "~",
-          "gain": 1,
           "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "cs4",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "cs4",
-          "gain": 1,
-          "release": 1.25
         },
         {
           "note": "~",
@@ -23715,7 +23555,7 @@
         {
           "note": "cs4",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -23730,7 +23570,167 @@
         {
           "note": "cs4",
           "gain": 1,
-          "release": 1.25
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "cs4",
+          "gain": 1,
+          "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "cs4",
+          "gain": 1,
+          "release": 1
         },
         {
           "note": "~",
@@ -23875,7 +23875,7 @@
         {
           "note": "cs4",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -23890,7 +23890,7 @@
         {
           "note": "cs4",
           "gain": 1,
-          "release": 1.25
+          "release": 1
         },
         {
           "note": "~",
@@ -26192,7 +26192,7 @@
         {
           "note": "ds4",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -26512,7 +26512,7 @@
         {
           "note": "ds4",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -27463,7 +27463,7 @@
         {
           "note": "e4",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -27783,7 +27783,7 @@
         {
           "note": "e4",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -29875,7 +29875,142 @@
         {
           "note": "fs3",
           "gain": 1,
-          "release": 0.75
+          "release": 0.25
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "fs3",
+          "gain": 1,
+          "release": 0.25
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
         },
         {
           "note": "~",
@@ -30058,211 +30193,6 @@
           "release": 1
         },
         {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "fs3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "fs3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
           "note": "fs3",
           "gain": 1,
           "release": 0.5
@@ -30333,6 +30263,76 @@
           "release": 1
         },
         {
+          "note": "fs3",
+          "gain": 1,
+          "release": 0.25
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
           "note": "~",
           "gain": 1,
           "release": 1
@@ -30400,7 +30400,7 @@
         {
           "note": "fs3",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -32492,21 +32492,6 @@
         {
           "note": "gs3",
           "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "gs3",
-          "gain": 1,
           "release": 0.5
         },
         {
@@ -32520,6 +32505,21 @@
           "release": 1
         },
         {
+          "note": "gs3",
+          "gain": 1,
+          "release": 0.25
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
           "note": "~",
           "gain": 1,
           "release": 1
@@ -32667,182 +32667,7 @@
         {
           "note": "gs3",
           "gain": 1,
-          "release": 0.5
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "gs3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "gs3",
-          "gain": 1,
-          "release": 0.5
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
+          "release": 0.25
         },
         {
           "note": "~",
@@ -32988,6 +32813,181 @@
           "note": "gs3",
           "gain": 1,
           "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "gs3",
+          "gain": 1,
+          "release": 0.25
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "gs3",
+          "gain": 1,
+          "release": 0.25
         },
         {
           "note": "~",
@@ -35049,7 +35049,7 @@
         {
           "note": "as3",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -35369,7 +35369,7 @@
         {
           "note": "as3",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -35569,7 +35569,7 @@
         {
           "note": "as3",
           "gain": 1,
-          "release": 0.5
+          "release": 0.25
         },
         {
           "note": "~",
@@ -36225,7 +36225,7 @@
         {
           "note": "b3",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -36240,182 +36240,7 @@
         {
           "note": "b3",
           "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "b3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "b3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "b3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
+          "release": 0.5
         },
         {
           "note": "~",
@@ -36495,87 +36320,7 @@
         {
           "note": "b3",
           "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "b3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "b3",
-          "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
+          "release": 0.5
         },
         {
           "note": "~",
@@ -36640,57 +36385,7 @@
         {
           "note": "b3",
           "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
+          "release": 0.5
         },
         {
           "note": "~",
@@ -36705,22 +36400,7 @@
         {
           "note": "b3",
           "gain": 1,
-          "release": 0.75
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "~",
-          "gain": 1,
-          "release": 1
-        },
-        {
-          "note": "b3",
-          "gain": 1,
-          "release": 0.75
+          "release": 0.5
         },
         {
           "note": "~",
@@ -36815,7 +36495,327 @@
         {
           "note": "b3",
           "gain": 1,
-          "release": 0.75
+          "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "b3",
+          "gain": 1,
+          "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "b3",
+          "gain": 1,
+          "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "b3",
+          "gain": 1,
+          "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "b3",
+          "gain": 1,
+          "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "b3",
+          "gain": 1,
+          "release": 0.5
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "~",
+          "gain": 1,
+          "release": 1
+        },
+        {
+          "note": "b3",
+          "gain": 1,
+          "release": 0.5
         },
         {
           "note": "~",
