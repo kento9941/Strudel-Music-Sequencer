@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# Strudel Music Sequencer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a fork of: [Mittans/strudel-reactor](https://github.com/Mittans/strudel_reactor.git)
 
-## Available Scripts
+## Modifications
 
-In the project directory, you can run:
+- Rebuilt UI with react
 
-### `npm start`
+- Added strudel based music sequencer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Added D3 based audio visualizer
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Added file handling
 
-### `npm test`
+- Removed unused original features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demonstration
 
-### `npm run build`
+Watch demonstration video [here](/public/Strudel_Music_Sequencer_Demo.mp4)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bars and Notes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Bars and Notes](/public/Bar.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- One bar consists of 4 beats and 16 notes, represented by white squares.
 
-### `npm run eject`
+- To add a note, click a black square to turn it white. Click a white square to delete a note.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- To open "Note Settings", click the double black line on the note (the red square shown above).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Keyboard, guitar, bass and synth instruments all have "Note Settings".
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Drums do not, because drum notes have no pitch.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Note Settings
 
-## Learn More
+![Note Settings](/public/Note-Settings.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- To adjust a note's pitch, select a radio button. In the image above, "C1" is the lowest C note and "C6" is the highest.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- To adjust duration, use the duration control at the bottom-left. This is adjustable in increments of 0.25.
 
-### Code Splitting
+- To adjust volume, use the volume slider at the button-right.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Tracks
 
-### Analyzing the Bundle Size
+![Tracks (Note))](/public/Tracks.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**↑ Note track**
 
-### Making a Progressive Web App
+![Tracks (Drums)](/public/Drum-Tracks.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**↑ Drum track**
 
-### Advanced Configuration
+Each track contains 2 bars (32 notes) by default.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- To adjust track volume, use the volume slider. This applies to all notes in the track. You can mute the track with the speaker icon.
 
-### Deployment
+- To reset a track, click the Reset button on the far right. This resets the track volume and deletes its notes, but **does not** reset the number of bars.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Add / Delete Bars
 
-### `npm run build` fails to minify
+![Add / Delete Bars](/public/Add-Delete-Bars.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- To add a bar, press "Add Bar". A new bar will appear on the far right.
+
+- To delete a bar, press "Delete". A confirmation dialog will appear - select "Yes" to delete the rightmost bar, or select "Cancel" to keep it.
+
+## Instrument Settings
+
+![Instrument Settings](/public/Instrument-Settings.png)
+
+- To select the instrument brands, use the brand selector on the bottom-left. This affects all tracks for that instrument.
+
+- To adjust the volume, use the volume slider. This affects all tracks for that instrument.
+
+- To play the instrument, press the ▶ button.
+
+## Global Settings
+
+![Global Settings](/public/Global-Settings.png)
+
+- To adjust the BPM, use the BPM control. This applies to all instruments.
+
+- To play all instruments together, press "Play All ▶".
+
+## Files
+
+![Files](/public/Files.png)
+
+You can manage your files and projects from the ≡ menu.
+
+- "Create New" creates a new project.
+
+- "Open JSON" loads a project from a JSON file.
+
+- "Save As JSON" exports the current project to a JSON file.
+
+## /my_music
+
+This folder stores your project JSON files. It includes "Firefly - Jim Yosef.json" by default, which is the author's (Kento Kawazoe) remix of [Jim Yosef - Firefly (NCS Release)](https://youtu.be/x_OwcYTNbHs?si=Whu2cGaWDM46Zf4W)
+
+## Tech Stack
+
+- React
+- Bootstrap 5
+- Zustand
+- D3.js
+- Strudel
+
+## Contact
+
+Author: Kento Kawazoe
+
+GitHub: [https://github.com/kawky008](https://github.com/kawky008)
+
+Email: kento9941@gmail.com

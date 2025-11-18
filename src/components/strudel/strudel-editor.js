@@ -87,10 +87,12 @@ export default function StrudelEditor() {
             <div
                 id="editor"
                 style={{
-                textAlign: "left",
-                margin: "0 auto",
-                width: "85vw",
-            }}/>
+                    textAlign: "left",
+                    margin: "0 auto",
+                    width: "85vw",
+                }}
+                hidden
+            />
         </div>
     );
     }
