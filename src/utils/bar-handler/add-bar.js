@@ -1,4 +1,4 @@
-export default function addSynthBar({ instrument, update }) {
+export default function addBar({ instrument, update }) {
     Object.entries(instrument).forEach(([name, inst]) => {
         if (name === "settings") return;
 

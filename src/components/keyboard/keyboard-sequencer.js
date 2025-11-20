@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useKeyboardStore } from "../../stores/use-keyboard-store";
-import KeyboardBarButtons from "./keyboard-bar-buttons";
 import BankSelector from "../bank-selector";
+import addBar from "../../utils/bar-handler/add-bar";
+import deleteBar from "../../utils/bar-handler/delete-bar";
 import KeyboardTrack from "./keyboard-tracks";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider";
 import KeyboardNoteSettings from "./keyboard-note-settings";
@@ -23,14 +24,14 @@ export default function KeyboardSequencer() {
     // note settings
     const [selectedNote, setSelectedNote] = useState({note: "", index: 0});
 
-    const keyboard = useKeyboardStore.getState().keyboard;
+    const instrument = useKeyboardStore.getState().keyboard;
 
     // keyboard settings
     const bank = useKeyboardStore((state) => state.keyboard.settings.bank);
     const keyboardGain = useKeyboardStore((state) => state.keyboard.settings.gain);
 
     // setter
-    const updateKeyboard = useKeyboardStore((state) => state.updateKeyboard);
+    const update = useKeyboardStore((state) => state.updateKeyboard);
 
     // keyboard tracks
     const { struct: cStruct, play: cPlay, gain: cGain } = useKeyboardStore((state) => state.keyboard.c);
@@ -60,7 +61,7 @@ export default function KeyboardSequencer() {
                             <i
                                 className="fa-solid fa-play"
                                 onClick={() => {
-                                    updateKeyboard("settings", {play: true});
+                                    update("settings", {play: true});
                                     proc?.();
                                     setIsPlaying(true);
                                     play?.();
@@ -70,7 +71,7 @@ export default function KeyboardSequencer() {
                             <i
                                 className="fa-solid fa-pause"
                                 onClick={() => {
-                                    updateKeyboard("settings", {play: false});
+                                    update("settings", {play: false});
                                     setIsPlaying(false);
                                     stop?.();
                                 }}
@@ -80,19 +81,26 @@ export default function KeyboardSequencer() {
                     
                     <div style={{display: "flex", alignItems: "center", gap: "1.5rem"}}>
 
-                        <BankSelector banks={banks} bank={bank} update={updateKeyboard} />
+                        <BankSelector banks={banks} bank={bank} update={update} />
 
                         {/* volume slider */}
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.3rem"}}>
                             <i className="mute-button fa-solid fa-volume-high" />                               
-                            <GeneralVolumeSlider name="settings" gain={keyboardGain} update={updateKeyboard} />
+                            <GeneralVolumeSlider name="settings" gain={keyboardGain} update={update} />
                         </div>
 
                     </div>
                 </div>
 
                 {/* add, delete bar button */}
-                <KeyboardBarButtons instrument={keyboard} update={updateKeyboard} />
+                <div className="bar-buttons">
+                    <div className="button" onClick={() => addBar({instrument, update})}>
+                        Add Bar
+                    </div>
+                    <div className="button" onClick={() => deleteBar({instrument, update})}>
+                        Delete Bar
+                    </div>
+                </div>
 
                 {/* note settings */}
                 {selectedNote.note !== "" &&

@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useSynthStore } from "../../stores/use-synth-store";
-import SynthBarButtons from "./synth-bar-buttons";
 import BankSelector from "../bank-selector";
+import addBar from "../../utils/bar-handler/add-bar";
+import deleteBar from "../../utils/bar-handler/delete-bar";
 import SynthTrack from "./synth-tracks";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider";
 import SynthNoteSettings from "./synth-note-settings";
@@ -23,14 +24,14 @@ export default function SynthSequencer() {
     // note settings
     const [selectedNote, setSelectedNote] = useState({note: "", index: 0});
 
-    const synth = useSynthStore.getState().synth;
+    const instrument = useSynthStore.getState().synth;
 
     // synth settings
     const bank = useSynthStore((state) => state.synth.settings.bank);
     const synthGain = useSynthStore((state) => state.synth.settings.gain);
 
     // setter
-    const updateSynth = useSynthStore((state) => state.updateSynth);
+    const update = useSynthStore((state) => state.updateSynth);
 
     // synth tracks
     const { struct: cStruct, play: cPlay, gain: cGain } = useSynthStore((state) => state.synth.c);
@@ -60,7 +61,7 @@ export default function SynthSequencer() {
                             <i
                                 className="fa-solid fa-play"
                                 onClick={() => {
-                                    updateSynth("settings", {play: true});
+                                    update("settings", {play: true});
                                     proc?.();
                                     setIsPlaying(true);
                                     play?.();
@@ -70,7 +71,7 @@ export default function SynthSequencer() {
                             <i
                                 className="fa-solid fa-pause"
                                 onClick={() => {
-                                    updateSynth("settings", {play: false});
+                                    update("settings", {play: false});
                                     setIsPlaying(false);
                                     stop?.();
                                 }}
@@ -80,19 +81,26 @@ export default function SynthSequencer() {
                     
                     <div style={{display: "flex", alignItems: "center", gap: "1.5rem"}}>
 
-                        <BankSelector banks={banks} bank={bank} update={updateSynth} />
+                        <BankSelector banks={banks} bank={bank} update={update} />
 
                         {/* volume slider */}
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.3rem"}}>
                             <i className="mute-button fa-solid fa-volume-high" />                               
-                            <GeneralVolumeSlider name="settings" gain={synthGain} update={updateSynth} />
+                            <GeneralVolumeSlider name="settings" gain={synthGain} update={update} />
                         </div>
 
                     </div>
                 </div>
 
                 {/* add, delete bar button */}
-                <SynthBarButtons instrument={synth} update={updateSynth} />
+                <div className="bar-buttons">
+                    <div className="button" onClick={() => addBar({instrument, update})}>
+                        Add Bar
+                    </div>
+                    <div className="button" onClick={() => deleteBar({instrument, update})}>
+                        Delete Bar
+                    </div>
+                </div>
 
                 {/* note settings */}
                 {selectedNote.note !== "" &&

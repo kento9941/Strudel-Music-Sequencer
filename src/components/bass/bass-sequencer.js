@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useBassStore } from "../../stores/use-bass-store";
-import BassBarButtons from "./bass-bar-buttons";
 import BankSelector from "../bank-selector";
+import addBar from "../../utils/bar-handler/add-bar";
+import deleteBar from "../../utils/bar-handler/delete-bar";
 import BassTrack from "./bass-tracks";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider";
 import BassNoteSettings from "./bass-note-settings";
@@ -27,14 +28,14 @@ export default function BassSequencer() {
     // note settings
     const [selectedNote, setSelectedNote] = useState({note: "", index: 0});
 
-    const bass = useBassStore.getState().bass;
+    const instrument = useBassStore.getState().bass;
 
     // bass settings
     const bank = useBassStore((state) => state.bass.settings.bank);
     const bassGain = useBassStore((state) => state.bass.settings.gain);
 
     // setter
-    const updateBass = useBassStore((state) => state.updateBass);
+    const update = useBassStore((state) => state.updateBass);
 
     // bass tracks
     const { struct: cStruct, play: cPlay, gain: cGain } = useBassStore((state) => state.bass.c);
@@ -64,7 +65,7 @@ export default function BassSequencer() {
                             <i
                                 className="fa-solid fa-play"
                                 onClick={() => {
-                                    updateBass("settings", {play: true});
+                                    update("settings", {play: true});
                                     proc?.();
                                     setIsPlaying(true);
                                     play?.();
@@ -74,7 +75,7 @@ export default function BassSequencer() {
                             <i
                                 className="fa-solid fa-pause"
                                 onClick={() => {
-                                    updateBass("settings", {play: false});
+                                    update("settings", {play: false});
                                     setIsPlaying(false);
                                     stop?.();
                                 }}
@@ -84,19 +85,26 @@ export default function BassSequencer() {
                     
                     <div style={{display: "flex", alignItems: "center", gap: "1.5rem"}}>
 
-                        <BankSelector banks={banks} bank={bank} update={updateBass} />
+                        <BankSelector banks={banks} bank={bank} update={update} />
 
                         {/* volume slider */}
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.3rem"}}>
                             <i className="mute-button fa-solid fa-volume-high" />                               
-                            <GeneralVolumeSlider name="settings" gain={bassGain} update={updateBass} />
+                            <GeneralVolumeSlider name="settings" gain={bassGain} update={update} />
                         </div>
 
                     </div>
                 </div>
 
                 {/* add, delete bar button */}
-                <BassBarButtons instrument={bass} update={updateBass} />
+                <div className="bar-buttons">
+                    <div className="button" onClick={() => addBar({instrument, update})}>
+                        Add Bar
+                    </div>
+                    <div className="button" onClick={() => deleteBar({instrument, update})}>
+                        Delete Bar
+                    </div>
+                </div>
 
                 {/* note settings */}
                 {selectedNote.note !== "" &&

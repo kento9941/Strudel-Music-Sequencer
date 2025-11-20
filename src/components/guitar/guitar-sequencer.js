@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useGuitarStore } from "../../stores/use-guitar-store";
-import GuitarBarButtons from "./guitar-bar-buttons";
 import BankSelector from "../bank-selector";
+import addBar from "../../utils/bar-handler/add-bar";
+import deleteBar from "../../utils/bar-handler/delete-bar";
 import GuitarTrack from "./guitar-tracks";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider";
 import GuitarNoteSettings from "./guitar-note-settings";
@@ -27,14 +28,14 @@ export default function GuitarSequencer() {
     // note settings
     const [selectedNote, setSelectedNote] = useState({note: "", index: 0});
 
-    const guitar = useGuitarStore.getState().guitar;
+    const instrument = useGuitarStore.getState().guitar;
 
     // guitar settings
     const bank = useGuitarStore((state) => state.guitar.settings.bank);
     const guitarGain = useGuitarStore((state) => state.guitar.settings.gain);
 
     // setter
-    const updateGuitar = useGuitarStore((state) => state.updateGuitar);
+    const update = useGuitarStore((state) => state.updateGuitar);
 
     // guitar tracks
     const { struct: cStruct, play: cPlay, gain: cGain } = useGuitarStore((state) => state.guitar.c);
@@ -64,7 +65,7 @@ export default function GuitarSequencer() {
                             <i
                                 className="fa-solid fa-play"
                                 onClick={() => {
-                                    updateGuitar("settings", {play: true});
+                                    update("settings", {play: true});
                                     proc?.();
                                     setIsPlaying(true);
                                     play?.();
@@ -74,7 +75,7 @@ export default function GuitarSequencer() {
                             <i
                                 className="fa-solid fa-pause"
                                 onClick={() => {
-                                    updateGuitar("settings", {play: false});
+                                    update("settings", {play: false});
                                     setIsPlaying(false);
                                     stop?.();
                                 }}
@@ -84,19 +85,26 @@ export default function GuitarSequencer() {
                     
                     <div style={{display: "flex", alignItems: "center", gap: "1.5rem"}}>
 
-                        <BankSelector banks={banks} bank={bank} update={updateGuitar} />
+                        <BankSelector banks={banks} bank={bank} update={update} />
 
                         {/* volume slider */}
                         <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "0.3rem"}}>
                             <i className="mute-button fa-solid fa-volume-high" />                               
-                            <GeneralVolumeSlider name="settings" gain={guitarGain} update={updateGuitar} />
+                            <GeneralVolumeSlider name="settings" gain={guitarGain} update={update} />
                         </div>
 
                     </div>
                 </div>
 
                 {/* add, delete bar button */}
-                <GuitarBarButtons instrument={guitar} update={updateGuitar} />
+                <div className="bar-buttons">
+                    <div className="button" onClick={() => addBar({instrument, update})}>
+                        Add Bar
+                    </div>
+                    <div className="button" onClick={() => deleteBar({instrument, update})}>
+                        Delete Bar
+                    </div>
+                </div>
 
                 {/* note settings */}
                 {selectedNote.note !== "" &&
