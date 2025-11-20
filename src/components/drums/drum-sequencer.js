@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useDrumStore } from "../../stores/use-drum-store";
 import DrumBarButtons from "./drum-bar-buttons";
-import BankSelector from "../bank-selector";
+import BankSelector from "../selectors/bank-selector";
 import DrumTrack from "./drum-tracks";
 import GeneralVolumeSlider from "../volume-sliders/general-volume-slider";
 

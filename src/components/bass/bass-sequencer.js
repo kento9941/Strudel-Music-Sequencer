@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useBassStore } from "../../stores/use-bass-store";
-import BankSelector from "../bank-selector";
+import BankSelector from "../selectors/bank-selector";
 import addBar from "../../utils/bar-handler/add-bar";
 import deleteBar from "../../utils/bar-handler/delete-bar";
 import BassTrack from "./bass-tracks";

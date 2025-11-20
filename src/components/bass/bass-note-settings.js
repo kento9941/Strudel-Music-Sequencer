@@ -1,5 +1,5 @@
 import { useBassStore } from "../../stores/use-bass-store";
-import OctaveRadio from "../octave-radio";
+import OctaveRadio from "../selectors/octave-radio";
 import ReleaseSelector from "../selectors/release-selector";
 import NoteVolumeSlider from "../volume-sliders/note-volume-slider";
 

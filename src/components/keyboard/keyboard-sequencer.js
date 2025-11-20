@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useStrudelStore } from "../../stores/use-strudel-store";
 import { useKeyboardStore } from "../../stores/use-keyboard-store";
-import BankSelector from "../bank-selector";
+import BankSelector from "../selectors/bank-selector";
 import addBar from "../../utils/bar-handler/add-bar";
 import deleteBar from "../../utils/bar-handler/delete-bar";
 import KeyboardTrack from "./keyboard-tracks";
