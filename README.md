@@ -14,9 +14,10 @@ This project is a fork of: [Mittans/strudel-reactor](https://github.com/Mittans/
 
 - Removed unused original features
 
-## Demonstration
+## Demo
 
-Watch demonstration video [here](/public/Strudel_Music_Sequencer_Demo.mp4)
+**Live Demo on Vercel**
+https://strudel-music-sequencer.vercel.app
 
 ## Bars and Notes
 
