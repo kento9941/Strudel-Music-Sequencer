@@ -1,18 +1,65 @@
 # Strudel Music Sequencer
 
+A modern, browser-based music sequencer built with React and powered by the Strudel live coding environment. Create, edit, and visualize musical patterns with an intuitive grid-based interface.
+
 This project is a fork of: [Mittans/strudel-reactor](https://github.com/Mittans/strudel_reactor.git)
+
+## Features
+
+- Modern, responsive UI built with React
+- Grid-based step sequencer for notes and drum patterns
+- Multiple instruments (keyboard, guitar, bass, synth, drums)
+- Per-note controls for pitch, duration, and volume
+- Per-track and per-instrument volume controls and mute
+- Global transport with BPM control and "Play All" support
+- Built-in D3-based audio visualizer
+- Project file management with JSON import/export
+- Example project included in `/my_music` to explore the sequencer
 
 ## Modifications
 
-- Rebuilt UI with react
+- Rebuilt UI with React
 
-- Added strudel based music sequencer
+- Added Strudel-based music sequencer
 
-- Added D3 based audio visualizer
+- Added D3-based audio visualizer
 
 - Added file handling
 
 - Removed unused original features
+
+## Setup
+
+### Prerequisites
+
+- Node.js (LTS recommended)
+- npm or yarn
+
+### Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/kawky008/Strudel-Music-Sequencer.git
+cd Strudel-Music-Sequencer
+npm install
+```
+
+### Running the app locally
+
+```bash
+npm run dev
+```
+
+Then open the URL shown in the terminal (typically `http://localhost:5173` or similar) in your browser.
+
+### Building for production
+
+```bash
+npm run build
+```
+
+Serve the generated files from the `dist` directory using your preferred static file host.
 
 ## Demo
 
@@ -108,6 +155,25 @@ This folder stores your project JSON files. It includes "Firefly - Jim Yosef.jso
 - Zustand
 - D3.js
 - Strudel
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome. If you’d like to contribute:
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes with clear messages
+4. Open a pull request describing your changes
+
+## License
+
+This project follows the same license as the original `strudel-reactor` project. See the `LICENSE` file in this repository for full details.
+
+## Acknowledgements
+
+- Original project: [Mittans/strudel-reactor](https://github.com/Mittans/strudel_reactor.git)
+- Strudel live coding environment
+- Open-source libraries listed in the Tech Stack section
 
 ## Contact
 
